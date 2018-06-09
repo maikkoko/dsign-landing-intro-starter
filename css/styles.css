@@ -14,3 +14,181 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; /* smoother rendering of fonts */
 }
+
+:root {
+  --primary: rgb(255,116,110);
+  --mid: rgba(136,136,136);
+  --dark: rgb(17,17,17);
+  --header-height: 120px;
+  --hero-height: calc(100vh - var(--header-height));
+}
+
+/*****************************
+  HEADER
+*****************************/
+
+header {
+  width: 100%;
+  height: var(--header-height);
+  padding: 0 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header > a.site-title {
+  color: var(--dark);
+  font-size: 1.7rem;
+  letter-spacing: 2px;
+}
+
+header > nav > a {
+  color: var(--mid);
+  text-transform: uppercase;
+  font-size: 0.92rem;
+  margin: 0 24px;
+}
+
+header > button {
+  background-color: transparent;
+  color: var(--dark);
+  border: 1px solid var(--mid);
+  border-radius: 32px;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  padding: 6px 28px;
+  text-transform: uppercase;
+}
+
+header > button:hover {
+  cursor: pointer;
+}
+
+/*****************************
+  SECTION 1
+*****************************/
+
+.section-1 {
+  height: var(--hero-height);
+  display: flex;
+}
+
+.section-1 > div {
+  flex: 1;
+}
+
+/* Left Side */
+
+.section-1 > .left {
+  position: relative;
+}
+
+.section-1 > .left > .scroll-cta {
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.85rem;  
+  text-decoration: none;
+  color: var(--dark);
+  text-transform: uppercase;
+  transform: rotate(-90deg);
+}
+
+.section-1 > .left > .scroll-cta::before {
+  content: ' ';
+  width: 40px;
+  margin-right: 16px;
+  border-top: 2px solid var(--dark);
+  border-bottom: 2px solid var(--dark);
+}
+
+.section-1 > .left > .hero-text {
+  position: absolute;
+  width: 75%;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hero-text > h1 {
+  font-family: "Montserrat", sans-serif;
+  color: var(--dark);
+  font-size: 3rem;
+  line-height: 6rem;
+  font-weight: normal;
+}
+
+.hero-text > p {
+  font-family: "Open Sans", sans-serif;
+  color: var(--mid);
+  line-height: 2rem;
+  font-size: 1.1rem;
+}
+
+.hero-text > h3 {
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.hero-text > h3::after {
+  content: ' ';
+  width: 36px;
+  margin-left: 16px;
+  border-top: 2px solid var(--dark);
+  border-bottom: 2px solid var(--dark);
+}
+
+.hero-text > h3 > a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  color: var(--dark);
+  text-decoration: none;
+  text-transform: uppercase;
+} 
+
+/* Right Side */
+
+.section-1 > .right {
+  overflow: hidden;
+}
+
+
+.section-1 > .right .hero-bg-1 {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,116,110,0.25);
+  clip-path: circle(70% at 75% 71%);
+}
+
+.section-1 > .right .hero-bg-2 {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,116,110,0.65);
+  clip-path: circle(65% at 75% 71%);
+}
+
+.section-1 > .right .hero-bg-3 {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,116,110,1);
+  clip-path: circle(60% at 75% 71%);
+}
+
+.section-1 > .right .hero-image {
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/nighttime.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  clip-path: circle(55% at 75% 71%);
+} 
