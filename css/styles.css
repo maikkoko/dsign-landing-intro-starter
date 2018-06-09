@@ -54,6 +54,10 @@ header > nav > a {
   margin: 0 24px;
 }
 
+header > nav > a:hover {
+  color: var(--dark);
+}
+
 header > button {
   background-color: transparent;
   color: var(--dark);
@@ -67,6 +71,8 @@ header > button {
 
 header > button:hover {
   cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.02);
+  color: var(--mid);
 }
 
 /*****************************
@@ -107,6 +113,11 @@ header > button:hover {
   margin-right: 16px;
   border-top: 2px solid var(--dark);
   border-bottom: 2px solid var(--dark);
+}
+
+.section-1 > .left > .scroll-cta:hover {
+  cursor: pointer;
+  opacity: 0.75;
 }
 
 .section-1 > .left > .hero-text {
@@ -154,6 +165,11 @@ header > button:hover {
   text-decoration: none;
   text-transform: uppercase;
 } 
+
+.hero-text > h3:hover {
+  cursor: pointer;
+  opacity: 0.75;
+}
 
 /* Right Side */
 
